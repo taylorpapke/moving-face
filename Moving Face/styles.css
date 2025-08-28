@@ -1,0 +1,82 @@
+.eye {
+  width:10%;
+  height:10%;
+  background-color:blue;
+  border-radius:0%;
+  position: absolute;
+  animation-name: blink; 
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 30;
+  animation-direction: alternate;
+}
+
+#left {
+  left:20%;
+  top:20%;
+  border-radius:20% 80%;
+  animation-delay: 0.5s;
+}
+
+#right {
+  right:20%;
+  top:20%;
+  border-radius:80% 20%;  
+}
+
+#head {
+  width:300px;
+  height:150px;
+  background-color:red;
+  border-radius:60%;
+  position: absolute;
+  animation-name: moveHead;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 10;
+  animation-direction: alternate;
+}
+
+#mouth {
+  position: absolute;
+  width:50%;
+  height:10%;
+  left:25%;
+  bottom:25%;
+  background-color:yellow;
+  border-radius: 60%;
+  animation-name: moveMouth;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 30;
+  animation-direction: alternate;
+}
+
+#nose {
+  position: absolute;
+  width:10%;
+  height:10%;
+  left:45%;
+  bottom:50%;
+  background-color:yellow;
+  border-radius: 60%;
+}
+
+/*****************************************/
+/*********** Animations ******************/
+/*****************************************/
+
+@keyframes moveHead {
+  from { left:0%; }
+  to { left:20%; }
+}
+
+@keyframes moveMouth {
+  from { height: 5%; border-radious: 60%; }
+  to { height: 15%; border-radious: 90%; }
+}
+
+@keyframes blink {
+  from { height:10%; top:20%; }
+  to { height:0px; top:30%; }
+}
